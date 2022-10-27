@@ -8,7 +8,7 @@ import { useEffect } from "react"
 
 
 
-export function App() {
+ export const App=()=>{
   const [searchName,setSearchName] = useState('');
   const [ page,setUseState] = useState(1);
   const [isLoading,setIsLoading] = useState(false);
