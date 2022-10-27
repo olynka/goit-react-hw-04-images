@@ -10,7 +10,6 @@ import { useEffect } from "react"
 
 export function App() {
   const [searchName,setSearchName] = useState('');
-  const [showModal,setShowModal] = useState(false);
   const [ page,setUseState] = useState(1);
   const [isLoading,setIsLoading] = useState(false);
   const [images,setImages] = useState([]);
