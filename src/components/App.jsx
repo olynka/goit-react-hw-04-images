@@ -11,9 +11,9 @@ import { useEffect } from "react"
  export const App=()=>{
   const [searchName,setSearchName] = useState('');
   const [ page,setUseState] = useState(1);
-  const [isLoading,setIsLoading] = useState(false);
+  const [setIsLoading] = useState(false);
   const [images,setImages] = useState([]);
-   const [ per_page,setPer_page] = useState(12);
+   const [ per_page] = useState(12);
   
 
   const hendleFormSubmit = searchName => {
