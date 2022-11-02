@@ -5,13 +5,13 @@ import { fetchImage } from "./Fetch/Fetch"
 import { Button } from "./Button/Button"
 import { toast, ToastContainer } from "react-toastify";
 import { useEffect } from "react"
-
+import {Loader} from'./Loader/Loader'
 
 
  export const App=()=>{
   const [searchName,setSearchName] = useState('');
   const [ page,setUseState] = useState(1);
-  const [setIsLoading] = useState(false);
+  const [IsLoading,setIsLoading] = useState(false);
   const [images,setImages] = useState([]);
    const [ per_page] = useState(12);
   
@@ -52,8 +52,10 @@ import { useEffect } from "react"
   return (
      <div>
         <SearchbarForm onSubmit={hendleFormSubmit}/>
-       <ToastContainer autoClose={2000} />
-        <ImageGallery images={images} />
+      <ToastContainer autoClose={2000} />
+      
+      <ImageGallery images={images} />
+      {IsLoading && <Loader/>}
      { images.length >=per_page && <Button handleClick={loadMore} />}
          </div>
   )
